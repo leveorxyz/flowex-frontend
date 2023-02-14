@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import { Box, Button, Container, Heading, HStack, Stack, Text } from '@chakra-ui/react';
+import Link from 'next/link';
 
 const Home: NextPage = () => {
   return (
@@ -63,13 +64,15 @@ const Home: NextPage = () => {
           </Text>
 
           <HStack justifyContent="center" maxW="600px">
-            <Button
-              bgColor="brand.yellow"
-              color="brand.blue"
-              _hover={{ bgColor: 'brand.blue', color: 'white' }}
-            >
-              Join Now
-            </Button>
+            <Link href="/registration">
+              <Button
+                bgColor="brand.yellow"
+                color="brand.blue"
+                _hover={{ bgColor: 'brand.blue', color: 'white' }}
+              >
+                Join Now
+              </Button>
+            </Link>
             <Button>Learn More</Button>
           </HStack>
         </Stack>

@@ -25,7 +25,7 @@ const TextInput = (props: Props) => {
         ms={{ base: '0px', md: '0px' }}
         fontWeight="500"
         size="lg"
-        _placeholder={{ color: 'brand.blue' }}
+        _placeholder={{ color: 'blackAlpha.700' }}
         {...register}
         {...rest}
       />

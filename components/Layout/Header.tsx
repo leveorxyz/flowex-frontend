@@ -9,7 +9,7 @@ const Header = () => {
   const [drawerOpen, setDrawerOpen] = useBoolean(false);
 
   return (
-    <Box position="fixed" top="0" left="0" right="0">
+    <Box position="fixed" top="0" left="0" right="0" zIndex="999">
       <Container maxW="container.xl" px="0" position="relative">
         <Image
           src="images/shapes/rectangle.png"
