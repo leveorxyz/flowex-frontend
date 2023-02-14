@@ -27,7 +27,7 @@ const Footer = () => {
             <Icon as={IoLogoYoutube} fontSize="2xl" />
           </HStack>
         </Flex>
-        <Divider borderColor="brand.gray" my={5} />
+        <Divider borderColor="blackAlpha.200" my={5} />
         <Flex
           justifyContent="space-between"
           alignItems="center"

@@ -59,6 +59,7 @@ const customTheme = extendTheme({
         solid: {
           color: 'white',
           px: 8,
+          py: 6,
           background: 'brand.blue',
           _active: {
             color: 'brand.blue',
