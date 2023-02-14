@@ -31,7 +31,9 @@ const Header = () => {
               <MenuLink link="#!" text="contact" />
             </HStack>
 
-            <Button display={{ base: 'none', md: 'inherit' }}>Login</Button>
+            <Link href="/login">
+              <Button display={{ base: 'none', md: 'flex' }}>Login</Button>
+            </Link>
 
             <Button variant="link" onClick={setDrawerOpen.on} display={{ md: 'none' }}>
               <IoMenu size="30" />

@@ -1,24 +1,14 @@
 import type { NextPage } from 'next';
-import { Box, Button, Container, Heading, HStack, Stack, Text } from '@chakra-ui/react';
+import { Box, Container, Stack } from '@chakra-ui/react';
+import LoginForm from 'components/Forms/LoginForm';
 
-const Home: NextPage = () => {
+const Login: NextPage = () => {
   return (
     <Container maxW="container.xl" py={20} overflowX="hidden">
       <Box position="relative">
-        <Stack direction="column" gap="5" maxW="700px">
+        <Stack direction="column" gap="5" maxW="700px" py={10}>
           <Box position="relative">
-            <Box
-              width="60px"
-              height="60px"
-              pos="absolute"
-              top="-1"
-              left="-2"
-              bg="brand.yellow"
-              borderRadius="xl"
-              transform="rotate(25deg)"
-              zIndex="-1"
-            />
-            <Heading size="3xl">From Forest to Floor</Heading>
+            <LoginForm />
             <Box
               width="20px"
               height="20px"
@@ -53,28 +43,9 @@ const Home: NextPage = () => {
               zIndex="-1"
             />
           </Box>
-          <Heading size="2xl">
-            Building a Better World <br /> One Board at a Time.
-          </Heading>
-
-          <Text fontSize="lg" fontWeight="medium" maxW="600px">
-            Discover the finest selection of wood products at the click of a button. Our online
-            platform connects you with a wide range of high-quality wood options for all your needs.
-          </Text>
-
-          <HStack justifyContent="center" maxW="600px">
-            <Button
-              bgColor="brand.yellow"
-              color="brand.blue"
-              _hover={{ bgColor: 'brand.blue', color: 'white' }}
-            >
-              Join Now
-            </Button>
-            <Button>Learn More</Button>
-          </HStack>
         </Stack>
 
-        <Box overflow="hidden" display={{ base: 'none', md: 'inherit' }} pt="10">
+        <Box display={{ base: 'none', md: 'inherit' }} pt="10">
           <Box
             width="300px"
             height="300px"
@@ -104,4 +75,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Login;
