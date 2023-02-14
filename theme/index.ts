@@ -4,33 +4,23 @@ const customTheme = extendTheme({
   styles: {
     global: {
       body: {
-        color: '#BCBCBC',
-        background: '#132235',
+        color: 'brand.blue',
+        background: 'gradient.bg',
       },
     },
   },
   colors: {
-    white: {
-      100: '#E2E2E2',
-      200: '#D7D7D7',
-    },
-    gray: {
-      100: '#BCBCBC',
-    },
     brand: {
-      100: '#132235',
-    },
-    blue: {
-      100: '#4274C4',
-    },
-    chocolate: {
-      100: '#302D42',
-      200: '#272435',
+      black: '#181818',
+      yellow: '#FBBE50',
+      blue: '#292C40',
+      gray: '#FAFAFA',
     },
     gradient: {
-      button: 'linear-gradient(93.51deg, #4274C4 2.84%, #B0FF93 99.18%)',
+      button: 'linear-gradient(rgba(252,238,213,1),rgba(252,238,213,1),rgba(255,231,186,1))',
       step: 'linear-gradient(93.51deg, #4274C4 2.84%, #B0FF93 99.18%)',
       card: 'linear-gradient(93.51deg, #4274C4 2.84%, #B0FF93 99.18%)',
+      bg: 'linear-gradient(rgba(252,238,213,1),rgba(252,238,213,1),rgba(255,231,186,1))',
     },
   },
 
@@ -67,18 +57,26 @@ const customTheme = extendTheme({
         },
         solid: {
           color: 'white',
-          background: 'gradient.button',
+          px: 8,
+          background: 'brand.blue',
           _active: {
-            color: 'gray.100',
-            background: 'transparent',
-            border: '2px solid',
-            borderColor: 'white.200',
+            color: 'brand.blue',
+            background: 'brand.yellow',
           },
           _hover: {
-            color: 'gray.100',
-            background: 'transparent',
-            border: '2px solid',
-            borderColor: 'white.200',
+            color: 'brand.blue',
+            background: 'brand.yellow',
+          },
+        },
+        link: {
+          color: 'brand.blue',
+          px: 8,
+
+          _active: {
+            color: 'brand.yellow',
+          },
+          _hover: {
+            color: 'brand.yellow',
           },
         },
       },

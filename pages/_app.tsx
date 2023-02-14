@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <WagmiConfig client={wagmiClient}>
         <RainbowKitProvider chains={chains}>
           <Head>
-            <title>IPPS</title>
+            <title>Flowex</title>
           </Head>
           <Layout>
             <Component {...pageProps} />

@@ -11,14 +11,10 @@ const MenuLink = ({ link, text }: PropTypes) => {
     <Link href={link}>
       <Text
         borderBottom="1.5px solid transparent"
-        textTransform="uppercase"
+        textTransform="capitalize"
         fontWeight="bold"
-        color="gray.100"
         _hover={{
-          background: 'gradient.button',
-          backgroundClip: 'text',
-          borderBottom: '1.5px solid',
-          borderBottomColor: 'blue.100',
+          color: 'brand.yellow',
         }}
       >
         {text}

@@ -7,7 +7,6 @@ import {
   DrawerBody,
   VStack,
 } from '@chakra-ui/react';
-import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Logo from '../Logo/Logo';
 import MenuLink from '../MenuLink/MenuLink';
 
@@ -20,9 +19,9 @@ const MobileDrawer = (props: IProps) => {
   const { onClose, isOpen } = props;
 
   return (
-    <Drawer placement="right" onClose={onClose} isOpen={isOpen} closeOnOverlayClick>
+    <Drawer placement="left" onClose={onClose} isOpen={isOpen} closeOnOverlayClick>
       <DrawerOverlay />
-      <DrawerContent bg="brand.100">
+      <DrawerContent bg="brand.gray">
         <DrawerCloseButton fontSize={16} />
         <DrawerHeader borderBottomWidth="1px">
           <Logo />
@@ -30,9 +29,9 @@ const MobileDrawer = (props: IProps) => {
         <DrawerBody>
           <VStack alignItems="flex-start" gap={8} mt={5}>
             <MenuLink link="/" text="home" />
-            <MenuLink link="/" text="apply for enlistment" />
-            <MenuLink link="/bank" text="staker info" />
-            <ConnectButton label="Connect Wallet" />
+            <MenuLink link="#!" text="category" />
+            <MenuLink link="#!" text="about" />
+            <MenuLink link="#!" text="contact" />
           </VStack>
         </DrawerBody>
       </DrawerContent>

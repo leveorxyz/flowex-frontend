@@ -9,6 +9,7 @@ const Layout = ({ children }: PropTypes) => {
   return (
     <>
       <Header />
+
       <main>{children}</main>
       <Footer />
     </>
