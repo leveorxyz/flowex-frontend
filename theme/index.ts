@@ -21,7 +21,7 @@ const customTheme = extendTheme({
     gradient: {
       button: 'linear-gradient(rgba(252,238,213,1),rgba(252,238,213,1),rgba(255,231,186,1))',
       step: 'linear-gradient(93.51deg, #4274C4 2.84%, #B0FF93 99.18%)',
-      card: 'linear-gradient(93.51deg, #4274C4 2.84%, #B0FF93 99.18%)',
+      card: 'linear-gradient(169.44deg, rgba(58, 129, 191, 0.08) 1.85%, rgba(65, 48, 90, 0.08) 98.72%)',
       bg: 'linear-gradient(rgba(252,238,213,1),rgba(252,238,213,1),rgba(255,231,186,1))',
       footer: 'linear-gradient(102.87deg, #FCEED5 6.43%, #FCEED5 78.33%, #FFE7BA 104.24%)',
     },

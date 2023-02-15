@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import { Container, Checkbox, Heading, Box, Text, Button, Stack, Flex } from '@chakra-ui/react';
 import LineItem from 'components/Order/LineItem';
 import TextInput from 'components/Inputs/TextInput';
+import Link from 'next/link';
 
 const QAApprove: NextPage = () => {
   return (
@@ -43,14 +44,16 @@ const QAApprove: NextPage = () => {
         </Stack>
 
         <Flex justifyContent="space-around" mt={2}>
-          <Button
-            size="xs"
-            bgColor="brand.yellow"
-            color="brand.blue"
-            _hover={{ bgColor: 'brand.blue', color: 'white' }}
-          >
-            Approve
-          </Button>
+          <Link href="/qa/scan">
+            <Button
+              size="xs"
+              bgColor="brand.yellow"
+              color="brand.blue"
+              _hover={{ bgColor: 'brand.blue', color: 'white' }}
+            >
+              Approve
+            </Button>
+          </Link>
 
           <Button
             size="xs"
