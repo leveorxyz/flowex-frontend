@@ -1,4 +1,5 @@
 import { Avatar, Box, Button, Flex, Image, Stack, Text } from '@chakra-ui/react';
+import Link from 'next/link';
 
 interface Props {
   thumbnail: string;
@@ -50,18 +51,22 @@ const RequestCard = (props: Props) => {
         </Stack>
       </Box>
       <Flex justifyContent="space-around" mt={2}>
-        <Button
-          size="xs"
-          bgColor="brand.yellow"
-          color="brand.blue"
-          _hover={{ bgColor: 'brand.blue', color: 'white' }}
-        >
-          Confirm Order
-        </Button>
+        <Link href="/supplier/order/1/confirm">
+          <Button
+            size="xs"
+            bgColor="brand.yellow"
+            color="brand.blue"
+            _hover={{ bgColor: 'brand.blue', color: 'white' }}
+          >
+            Confirm Order
+          </Button>
+        </Link>
 
-        <Button bgColor="brand.maroon" size="xs">
-          Reject Order
-        </Button>
+        <Link href="/supplier/order/1/reject">
+          <Button bgColor="brand.maroon" size="xs">
+            Reject Order
+          </Button>
+        </Link>
       </Flex>
     </Box>
   );
