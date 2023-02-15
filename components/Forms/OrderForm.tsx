@@ -1,4 +1,4 @@
-import { Box, Stack, Button, HStack } from '@chakra-ui/react';
+import { Box, Stack, Button } from '@chakra-ui/react';
 import TextInput from 'components/Inputs/TextInput';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
