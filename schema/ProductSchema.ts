@@ -16,3 +16,11 @@ export const ProductSupplySchema = object({
   lat: string().required('Latitude is required'),
   lng: string().required('Longitude is required'),
 });
+
+export const OrderSchema = object({
+  destination: string().required('Destination is required'),
+  confirmationDeadline: string().required('Confirmation deadline is required'),
+  amountRequest: number().required('Amount request is required'),
+  expectedMinDeliveryDate: string().required('Expected min delivery date required'),
+  expectedMaxDeliveryDate: string().required('Expected max delivery date required'),
+});
