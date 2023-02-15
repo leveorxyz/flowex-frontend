@@ -7,13 +7,13 @@ interface Props {
   condition: string;
   location: string;
   avatar: string;
-  username: string;
+  productID: string;
   supply: string;
   status: OrderStatus;
 }
 
 const ProductCard = (props: Props) => {
-  const { thumbnail, condition, location, avatar, username, supply, status } = props;
+  const { thumbnail, condition, location, avatar, productID, supply, status } = props;
 
   return (
     <Box w="328px">
@@ -31,10 +31,10 @@ const ProductCard = (props: Props) => {
 
         <Flex justifyContent="space-between" alignItems="center" mt="1">
           <Flex gap={1} alignItems="center">
-            <Avatar name={username} src={avatar} />
+            <Avatar name={productID} src={avatar} />
             <Box>
               <Text fontSize="sm" fontWeight="bold">
-                #{username}
+                #{productID}
               </Text>
               <Text fontSize="sm" fontWeight="medium">
                 Supply {supply}

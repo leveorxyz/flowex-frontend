@@ -1,6 +1,6 @@
 import { TableContainer, Table, Thead, Tr, Th, Tbody, Td, Avatar, HStack } from '@chakra-ui/react';
 import Pagination from '../Pagination/Pagination';
-import PageSize from './PageSize';
+import PageSize from '../Pagination/PageSize';
 import TableFilter from './TableFilter';
 
 const StakeTable = () => {

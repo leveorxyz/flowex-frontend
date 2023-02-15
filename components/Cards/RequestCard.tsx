@@ -6,13 +6,13 @@ interface Props {
   date: string;
   avatar: string;
   amount: string;
-  username: string;
+  productID: string;
   company: string;
   contactEmail: string;
 }
 
 const RequestCard = (props: Props) => {
-  const { thumbnail, condition, date, avatar, username, amount, company, contactEmail } = props;
+  const { thumbnail, condition, date, avatar, productID, amount, company, contactEmail } = props;
 
   return (
     <Box w="328px">
@@ -30,10 +30,10 @@ const RequestCard = (props: Props) => {
           </Flex>
 
           <Flex gap={1} alignItems="center">
-            <Avatar name={username} src={avatar} />
+            <Avatar name={productID} src={avatar} />
             <Box>
               <Text fontSize="sm" fontWeight="bold">
-                #{username}
+                #{productID}
               </Text>
               <Text fontSize="sm" fontWeight="medium">
                 Amount Requested <b>{amount}</b>

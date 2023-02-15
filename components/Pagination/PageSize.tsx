@@ -3,7 +3,7 @@ const PageSize = () => {
   return (
     <HStack>
       <Text>Showing max of </Text>
-      <Select maxW="70" size="sm">
+      <Select maxW="70" size="sm" borderColor="brand.blue">
         <option value="10">10</option>
         <option value="10">20</option>
         <option value="10">40</option>

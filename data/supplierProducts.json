@@ -4,7 +4,7 @@
     "condition": "preprocessed",
     "location": "Berlin, Germany",
     "avatar": "/images/avatar.jpeg",
-    "username": "#P6564",
+    "productID": "P6564",
     "supply": "23 CFT",
     "status": "rejected"
   },
@@ -13,7 +13,7 @@
     "condition": "raw",
     "location": "Berlin, Germany",
     "avatar": "/images/avatar.jpeg",
-    "username": "#P6564",
+    "productID": "P6564",
     "supply": "23 CFT",
     "status": "approved"
   },
@@ -22,7 +22,7 @@
     "condition": "preprocessed",
     "location": "Berlin, Germany",
     "avatar": "/images/avatar.jpeg",
-    "username": "#P6564",
+    "productID": "P6564",
     "supply": "23 CFT",
     "status": "pending"
   },
@@ -31,7 +31,7 @@
     "condition": "preprocessed",
     "location": "Berlin, Germany",
     "avatar": "/images/avatar.jpeg",
-    "username": "#P6564",
+    "productID": "P6564",
     "supply": "23 CFT",
     "status": "approved"
   },
@@ -40,7 +40,7 @@
     "condition": "preprocessed",
     "location": "Berlin, Germany",
     "avatar": "/images/avatar.jpeg",
-    "username": "#P6564",
+    "productID": "P6564",
     "supply": "23 CFT",
     "status": "approved"
   },
@@ -49,7 +49,7 @@
     "condition": "preprocessed",
     "location": "Berlin, Germany",
     "avatar": "/images/avatar.jpeg",
-    "username": "#P6564",
+    "productID": "P6564",
     "supply": "23 CFT",
     "status": "approved"
   }

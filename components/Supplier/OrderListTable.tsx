@@ -12,34 +12,48 @@ import {
 } from '@chakra-ui/react';
 import Pagination from '../Pagination/Pagination';
 import PageSize from '../Pagination/PageSize';
-import TableFilter from './TableFilter';
+import ongoingOrders from 'data/ongoingOrders.json';
+import Status from 'components/Cards/Status';
+import { OrderStatus } from 'types/product';
 
-const EarningTable = () => {
+const OrderListTable = () => {
   return (
     <TableContainer mt={10}>
-      <TableFilter title="My last 10 staking Info" />
-      <Table variant="simple" size="sm">
+      <Table variant="custom" size="sm" border="1px" borderColor="brand.blue">
         <Thead>
-          <Tr>
-            <Th>Address</Th>
-            <Th>Amount</Th>
-            <Th>Locked Since</Th>
-            <Th>Locked Until</Th>
+          <Tr _odd={{ bgColor: 'transparent' }}>
+            <Th>Buyer</Th>
+            <Th>Contact</Th>
+            <Th>Price (In EURO)</Th>
+            <Th>Order Req</Th>
+            <Th>Order Approval</Th>
+            <Th>Delivery</Th>
+            <Th>Location</Th>
+            <Th>Product ID</Th>
+            <Th>Status</Th>
             <Th>Action</Th>
           </Tr>
         </Thead>
         <Tbody>
-          {tableData.map((item) => (
-            <Tr key={item.id}>
+          {ongoingOrders.map((item, idx) => (
+            <Tr key={idx}>
               <Td alignItems="center">
-                <Avatar name={item.name} size="xs" /> {item.name}
+                <Avatar name={item.buyer} size="xs" /> {item.buyer}
               </Td>
-              <Td>{item.amount}</Td>
-              <Td>{item.lockedSince}</Td>
-              <Td>{item.lockedUntil}</Td>
+              <Td>{item.contact}</Td>
+              <Td>{item.price}</Td>
+              <Td>{item.requestDate}</Td>
+              <Td>{item.approvalDate}</Td>
+              <Td>{item.deliveryDate}</Td>
+              <Td>{item.location}</Td>
+              <Td>{item.productID}</Td>
               <Td>
-                <Button variant="outline" borderColor="red" size="sm" textColor="red">
-                  unlock
+                <Status status={item.status as OrderStatus} />
+              </Td>
+
+              <Td>
+                <Button size="xs" py="4" px="2">
+                  Details
                 </Button>
               </Td>
             </Tr>
@@ -55,7 +69,7 @@ const EarningTable = () => {
   );
 };
 
-export default EarningTable;
+export default OrderListTable;
 
 const tableData = [
   {

@@ -85,6 +85,17 @@ const customTheme = extendTheme({
         },
       },
     },
+    Table: {
+      variants: {
+        custom: {
+          tr: {
+            _odd: {
+              background: 'white',
+            },
+          },
+        },
+      },
+    },
   },
 });
 

@@ -21,7 +21,7 @@ const MobileDrawer = (props: IProps) => {
   return (
     <Drawer placement="left" onClose={onClose} isOpen={isOpen} closeOnOverlayClick>
       <DrawerOverlay />
-      <DrawerContent bg="brand.gray">
+      <DrawerContent bg="gradient.bg">
         <DrawerCloseButton fontSize={16} />
         <DrawerHeader borderBottomWidth="1px">
           <Logo />
