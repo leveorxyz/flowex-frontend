@@ -1,15 +1,15 @@
 import type { NextPage } from 'next';
 import { Box, Container } from '@chakra-ui/react';
-import RegistrationForm from 'components/Forms/RegistrationForm';
+import AddProductForm from 'components/Forms/AddProductForm';
 
-const Registration: NextPage = () => {
+const AddProduct: NextPage = () => {
   return (
     <Container maxW="container.xl" py={20} overflowX="hidden">
       <Box>
-        <RegistrationForm />
+        <AddProductForm />
       </Box>
     </Container>
   );
 };
 
-export default Registration;
+export default AddProduct;

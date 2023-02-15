@@ -96,6 +96,44 @@ const customTheme = extendTheme({
         },
       },
     },
+    Radio: {
+      variants: {
+        primary: {
+          control: {
+            borderColor: 'brand.blue',
+            backgroundColor: 'white',
+            _checked: {
+              color: 'brand.blue',
+              borderColor: 'brand.blue',
+            },
+          },
+        },
+      },
+      defaultProps: {
+        variant: 'primary',
+        colorScheme: 'primary',
+      },
+    },
+    Checkbox: {
+      variants: {
+        primary: {
+          borderColor: 'red',
+          control: {
+            borderColor: 'brand.blue',
+            backgroundColor: 'white',
+            _checked: {
+              color: 'white',
+              borderColor: 'brand.blue',
+              backgroundColor: 'brand.blue',
+            },
+          },
+        },
+      },
+      defaultProps: {
+        variant: 'primary',
+        colorScheme: 'primary',
+      },
+    },
   },
 });
 
