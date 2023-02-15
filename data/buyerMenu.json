@@ -9,7 +9,7 @@
   },
   {
     "name": "Confirmed order",
-    "link": "/supplier/history"
+    "link": "/buyer/history"
   },
   {
     "name": "requests",
@@ -17,7 +17,7 @@
   },
   {
     "name": "history",
-    "link": "/supplier/order-request"
+    "link": "/buyer/order-history"
   },
   {
     "name": "map",
