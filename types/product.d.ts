@@ -20,3 +20,10 @@ export interface ProductPayload {
   ratio_chl: boolean;
   fiber_length: boolean;
 }
+
+export interface ProductSupplyPayload {
+  amount: string;
+  dateCut: string;
+  lat: string;
+  lng: string;
+}

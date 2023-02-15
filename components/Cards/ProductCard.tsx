@@ -49,14 +49,16 @@ const ProductCard = (props: Props) => {
       </Link>
       <Flex justifyContent="space-around" mt={2}>
         {status === 'approved' && (
-          <Button
-            size="xs"
-            bgColor="brand.yellow"
-            color="brand.blue"
-            _hover={{ bgColor: 'brand.blue', color: 'white' }}
-          >
-            Add Supply
-          </Button>
+          <Link href="/supplier/product/1/add-supply">
+            <Button
+              size="xs"
+              bgColor="brand.yellow"
+              color="brand.blue"
+              _hover={{ bgColor: 'brand.blue', color: 'white' }}
+            >
+              Add Supply
+            </Button>
+          </Link>
         )}
         <Button bgColor="brand.maroon" size="xs">
           Remove Product
