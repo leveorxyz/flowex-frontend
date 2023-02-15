@@ -27,8 +27,8 @@ const Supplier: NextPage = () => {
       </Flex>
 
       <SimpleGrid columns={[1, 2]} gap={10} placeItems="center" mt={10}>
-        {supplierProducts.map((product) => (
-          <ProductCard {...product} status={product.status as OrderStatus} />
+        {supplierProducts.map((product, idx) => (
+          <ProductCard key={idx} {...product} status={product.status as OrderStatus} />
         ))}
       </SimpleGrid>
     </Container>

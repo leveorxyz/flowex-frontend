@@ -18,7 +18,7 @@ const ProductCard = (props: Props) => {
   return (
     <Box w="328px">
       <Box border="1px" borderColor="brand.blue" rounded="3xl" p={4}>
-        <Image src={thumbnail} rounded="3xl" alt="placeholder" />
+        <Image src={thumbnail} rounded="3xl" alt="placeholder" width="100%" height="300px" />
 
         <Flex justifyContent="space-between" mt={2}>
           <Text fontSize="sm" fontWeight="semibold" textTransform="uppercase">
@@ -33,7 +33,7 @@ const ProductCard = (props: Props) => {
           <Flex gap={1} alignItems="center">
             <Avatar name={username} src={avatar} />
             <Box>
-              <Text fontSize="sm" fontWeight="medium">
+              <Text fontSize="sm" fontWeight="bold">
                 #{username}
               </Text>
               <Text fontSize="sm" fontWeight="medium">
