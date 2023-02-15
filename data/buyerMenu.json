@@ -5,11 +5,11 @@
   },
   {
     "name": "Suppliers",
-    "link": "/supplier"
+    "link": "/buyer/supplier"
   },
   {
     "name": "Confirmed order",
-    "link": "/buyer/history"
+    "link": "/buyer/confirmed-orders"
   },
   {
     "name": "requests",

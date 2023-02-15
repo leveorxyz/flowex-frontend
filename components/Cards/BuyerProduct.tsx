@@ -1,7 +1,6 @@
 import { Avatar, Box, Button, Flex, Image, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import { OrderStatus } from 'types/product';
-import Status from './Status';
 
 interface Props {
   thumbnail: string;
