@@ -1,19 +1,6 @@
 import type { NextPage } from 'next';
-import { Box, Button, Container, Heading, SimpleGrid, Stack, Text } from '@chakra-ui/react';
-
-interface LineItemProps {
-  label: string;
-  value: string;
-}
-
-const LineItem = ({ label, value }: LineItemProps) => {
-  return (
-    <SimpleGrid columns={2}>
-      <Text>{label}</Text>
-      <Text fontWeight="bold">{value}</Text>
-    </SimpleGrid>
-  );
-};
+import { Box, Button, Container, Heading, Stack } from '@chakra-ui/react';
+import LineItem from 'components/Order/LineItem';
 
 const ConfirmOrder: NextPage = () => {
   return (
