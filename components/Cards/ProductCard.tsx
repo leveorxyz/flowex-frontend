@@ -1,4 +1,5 @@
 import { Avatar, Box, Button, Flex, Image, Text } from '@chakra-ui/react';
+import Link from 'next/link';
 import { OrderStatus } from 'types/product';
 import Status from './Status';
 
@@ -17,33 +18,35 @@ const ProductCard = (props: Props) => {
 
   return (
     <Box w="328px">
-      <Box border="1px" borderColor="brand.blue" rounded="3xl" p={4}>
-        <Image src={thumbnail} rounded="3xl" alt="placeholder" width="100%" height="300px" />
+      <Link href="/supplier/product/1">
+        <Box border="1px" borderColor="brand.blue" rounded="3xl" p={4}>
+          <Image src={thumbnail} rounded="3xl" alt="placeholder" width="100%" height="300px" />
 
-        <Flex justifyContent="space-between" mt={2}>
-          <Text fontSize="sm" fontWeight="semibold" textTransform="uppercase">
-            {condition}
-          </Text>
-          <Text fontSize="sm" fontWeight="semibold">
-            {location}
-          </Text>
-        </Flex>
-
-        <Flex justifyContent="space-between" alignItems="center" mt="1">
-          <Flex gap={1} alignItems="center">
-            <Avatar name={productID} src={avatar} />
-            <Box>
-              <Text fontSize="sm" fontWeight="bold">
-                #{productID}
-              </Text>
-              <Text fontSize="sm" fontWeight="medium">
-                Supply {supply}
-              </Text>
-            </Box>
+          <Flex justifyContent="space-between" mt={2}>
+            <Text fontSize="sm" fontWeight="semibold" textTransform="uppercase">
+              {condition}
+            </Text>
+            <Text fontSize="sm" fontWeight="semibold">
+              {location}
+            </Text>
           </Flex>
-          <Status status={status} />
-        </Flex>
-      </Box>
+
+          <Flex justifyContent="space-between" alignItems="center" mt="1">
+            <Flex gap={1} alignItems="center">
+              <Avatar name={productID} src={avatar} />
+              <Box>
+                <Text fontSize="sm" fontWeight="bold">
+                  #{productID}
+                </Text>
+                <Text fontSize="sm" fontWeight="medium">
+                  Supply {supply}
+                </Text>
+              </Box>
+            </Flex>
+            <Status status={status} />
+          </Flex>
+        </Box>
+      </Link>
       <Flex justifyContent="space-around" mt={2}>
         {status === 'approved' && (
           <Button

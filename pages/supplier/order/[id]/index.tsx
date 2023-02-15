@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
-import { Box, Button, Container, Heading, Stack } from '@chakra-ui/react';
+import { Box, Container, Heading, Stack } from '@chakra-ui/react';
 import LineItem from 'components/Order/LineItem';
 
-const RejectOrder: NextPage = () => {
+const OrderDetails: NextPage = () => {
   return (
     <Container maxW="container.xl" py={20} overflowX="hidden">
       <Heading size="lg">Product Details</Heading>
@@ -26,11 +26,11 @@ const RejectOrder: NextPage = () => {
           <LineItem label="Expected max delivery date" value="24 Feb 2023" />
           <LineItem label="Total price" value="€34" />
           <LineItem label="Now paying" value="€14" />
-          <Button bgColor="brand.maroon">Reject Order</Button>
+          <LineItem label="Order Status" value="Accepted at 12 Feb 2023" />
         </Stack>
       </Box>
     </Container>
   );
 };
 
-export default RejectOrder;
+export default OrderDetails;
