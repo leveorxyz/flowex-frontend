@@ -13,7 +13,7 @@ interface Props {
 }
 
 const BuyerProduct = (props: Props) => {
-  const { thumbnail, condition, location, avatar, productID, supply, status } = props;
+  const { thumbnail, condition, location, avatar, productID, supply } = props;
 
   return (
     <Box w="328px">
