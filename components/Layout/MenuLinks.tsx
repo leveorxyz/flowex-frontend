@@ -1,10 +1,10 @@
 import MenuLink from 'components/MenuLink/MenuLink';
-
 import { useMemo } from 'react';
 import { useAuthStore } from 'store/AuthStore';
 import { Role } from 'types/enums';
 import menuLinks from 'data/menuLinks.json';
 import supplierLinks from 'data/supplierMenu.json';
+import buyerLinks from 'data/buyerMenu.json';
 
 export const MenuLinks = () => {
   const { role } = useAuthStore();
@@ -13,6 +13,8 @@ export const MenuLinks = () => {
     switch (role) {
       case Role.SUPPLIER:
         return supplierLinks;
+      case Role.BUYER:
+        return buyerLinks;
       default:
         return menuLinks;
     }

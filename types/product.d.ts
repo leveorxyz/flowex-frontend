@@ -27,3 +27,11 @@ export interface ProductSupplyPayload {
   lat: string;
   lng: string;
 }
+
+export interface OrderPayload {
+  destination: string;
+  confirmationDeadline: string;
+  amountRequest: number;
+  expectedMinDeliveryDate: string;
+  expectedMaxDeliveryDate: string;
+}
