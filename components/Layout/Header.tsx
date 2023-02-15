@@ -1,12 +1,15 @@
 import Link from 'next/link';
 import { Box, Flex, Button, HStack, Container, useBoolean, Image } from '@chakra-ui/react';
 import { IoMenu } from 'react-icons/io5';
+import { useAuthStore } from 'store/AuthStore';
 import MobileDrawer from './MobileDrawer';
 import Logo from '../Logo/Logo';
-import MenuLink from '../MenuLink/MenuLink';
+import { MenuLinks } from './MenuLinks';
+import ProfileMenu from './ProfileMenu';
 
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useBoolean(false);
+  const { token, logout } = useAuthStore();
 
   return (
     <Box position="fixed" top="0" left="0" right="0" zIndex="999">
@@ -25,15 +28,19 @@ const Header = () => {
             </Link>
 
             <HStack gap={7} display={{ base: 'none', md: 'flex' }}>
-              <MenuLink link="/" text="home" />
-              <MenuLink link="#!" text="category" />
-              <MenuLink link="#!" text="about" />
-              <MenuLink link="#!" text="contact" />
+              <MenuLinks />
+              <ProfileMenu />
             </HStack>
 
-            <Link href="/login">
-              <Button display={{ base: 'none', md: 'flex' }}>Login</Button>
-            </Link>
+            {token ? (
+              <Button display={{ base: 'none', md: 'flex' }} onClick={logout}>
+                Logout
+              </Button>
+            ) : (
+              <Link href="/login">
+                <Button display={{ base: 'none', md: 'flex' }}>Login</Button>
+              </Link>
+            )}
 
             <Button variant="link" onClick={setDrawerOpen.on} display={{ md: 'none' }}>
               <IoMenu size="30" />

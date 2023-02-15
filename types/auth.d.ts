@@ -1,7 +1,9 @@
+import { Role } from './enums';
+
 export interface LoginPayload {
   company: string;
   password: string;
-  role: string;
+  role: Role;
 }
 
 export interface RegistrationPayload {

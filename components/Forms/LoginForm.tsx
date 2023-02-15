@@ -10,9 +10,13 @@ import {
 } from '@chakra-ui/react';
 import TextInput from 'components/Inputs/TextInput';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { LoginSchema } from 'schema/AuthSchema';
 import { LoginPayload } from 'types/auth';
+import { Role } from 'types/enums';
+import { useAuthStore } from 'store/AuthStore';
+import { useRouter } from 'next/router';
 
 const LoginForm = () => {
   const {
@@ -20,9 +24,20 @@ const LoginForm = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<LoginPayload>({ resolver: yupResolver(LoginSchema) });
+  const router = useRouter();
 
   const handleFormSubmit = (data: LoginPayload) => {
-    console.log(data);
+    useAuthStore.setState({
+      token: 'token_to_be_replaced',
+      role: data.role,
+    });
+    toast.success('Logged in successfully!');
+
+    if (data.role === Role.BUYER) {
+      router.push('/buyer');
+    } else if (data.role === Role.SUPPLIER) {
+      router.push('/supplier');
+    }
   };
 
   return (

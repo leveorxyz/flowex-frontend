@@ -8,7 +8,7 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import Logo from '../Logo/Logo';
-import MenuLink from '../MenuLink/MenuLink';
+import { MenuLinks } from './MenuLinks';
 
 interface IProps {
   onClose: () => void;
@@ -28,10 +28,7 @@ const MobileDrawer = (props: IProps) => {
         </DrawerHeader>
         <DrawerBody>
           <VStack alignItems="flex-start" gap={8} mt={5}>
-            <MenuLink link="/" text="home" />
-            <MenuLink link="#!" text="category" />
-            <MenuLink link="#!" text="about" />
-            <MenuLink link="#!" text="contact" />
+            <MenuLinks />
           </VStack>
         </DrawerBody>
       </DrawerContent>

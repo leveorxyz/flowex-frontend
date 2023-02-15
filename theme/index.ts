@@ -15,6 +15,8 @@ const customTheme = extendTheme({
       yellow: '#FBBE50',
       blue: '#292C40',
       gray: '#FAFAFA',
+      maroon: '#972E27',
+      green: '#519727',
     },
     gradient: {
       button: 'linear-gradient(rgba(252,238,213,1),rgba(252,238,213,1),rgba(255,231,186,1))',
